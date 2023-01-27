@@ -63,7 +63,7 @@ class Solution:
 
 	# def maxProfit(self, prices: list[int]) -> int:
 
-	# 	print(len(prices))
+
 	# 	print(max(prices, default = 0))
 	# 	print(prices.index(max(prices, default = 0)))
 	# 	print(prices.index(min(prices, default = 0)))
