@@ -1,7 +1,6 @@
 class solution:
 	def __init__(self) -> None:
 		self.price_list = [900,510,174,329,873,382,279,855,396,810,322,192,442,775,445,861,303,975,478,543,87]
-		# self.price_list=[7,1,5,3,6,4]
 		self.backup = self.price_list
 		self.max_price = 0
 		self.min_price = 0
