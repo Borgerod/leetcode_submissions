@@ -11,8 +11,6 @@ class solution:
 
 	def setMax(self, ):
 		self.max_price = max(self.price_list, default=0)
-		
-		print(self.price_list)
 
 	def maxProfit(self, ):
 		print(self.max_price)
