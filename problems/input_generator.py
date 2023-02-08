@@ -14,7 +14,6 @@ class Generator:
         self.sample_list = None
 
     def printInfo(self) -> None:
-        # if self.info:
         print(f"""
         _____________________ {self.size}  {self.type.__name__} {self.isList} info _________________________
         self.min_max: {self.min_max}
