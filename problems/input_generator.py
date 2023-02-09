@@ -30,7 +30,6 @@ class Generator:
         self.random_generator_range = random.randint(1,(10 ** self.random_generator_digit))
         self.random_list_digit = random.randint(1,5)
         self.random_list_range = random.randint(1,(10 ** self.random_list_digit))
-        # return self.random_generator_digit, self.random_generator_range, self.random_list_digit, self.random_list_range
     
     def getSizeRange(self) -> list[int]:
         if self.size == "big":
