@@ -13,7 +13,6 @@ class solution:
 		self.max_price = max(self.price_list, default=0)
 
 	def maxProfit(self, ):
-		print(self.max_price)
 		print(self.min_price)
 		if self.checkIfTrue():
 			print(f"{self.price_list.index(self.max_price)} > {self.price_list.index(self.min_price)}")
