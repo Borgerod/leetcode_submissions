@@ -24,7 +24,6 @@ class solution:
 
 
 	def maxProfit(self, ):
-# 		print(self.min_price)
 # 		print(self.price_list)
 		if self.checkIfTrue():
 			print(f"{self.price_list.index(self.max_price)} > {self.price_list.index(self.min_price)}")
