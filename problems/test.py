@@ -45,4 +45,4 @@ s = solution()
 s.setMin()
 s.setMax()
 s.maxProfit()
-#print(f" ==> {s.result}")###
+#print(f" ==> {s.result}")####
