@@ -4,7 +4,6 @@ import random
 class solution:
 	def __init__(self, input) -> None:
 		self.price_list = input
-		# self.price_list = [900,510,174,329,873,382,279,855,396,810,322,192,442,775,445,861,303,975,478,543,87]
 		self.backup = self.price_list
 		self.max_price = 0
 		self.min_price = 0
