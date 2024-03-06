@@ -1,8 +1,11 @@
-l=[5,9,5,7]
-result= []
+solutions = {
+	'a': None,
+	'b': None,
+	'c': None,
+}
 
-for i in range(0,len(l)): 
-    last_elem = l.pop() 
-    result.append(last_elem) 
-    l = [i-1 for i in l]
-print(result)
+soluition_list = [[0,2,4]]
+
+for i in soluition_list:
+    print(solutions(i))
+

@@ -1,79 +1,56 @@
+from collections import defaultdict, Counter
 class Solution:
     def threeSum(self, nums: list[int]) -> list[list[int]]:
-        compressed_list = nums
-        print("nums: ",compressed_list, len(compressed_list),"\n")
-        combinations = []
-        for a in compressed_list:
-            compressed_list_copy = compressed_list.copy()
-            compressed_list_copy.remove(a)
-            print(f"a ({a}) removed: {compressed_list_copy}", len(compressed_list_copy))
-            for b in compressed_list_copy:
-                if b in compressed_list_copy:
-                    compressed_list_copy.remove(b)
-                    print(b)
-                    for c in compressed_list_copy:
-                        if c in compressed_list_copy:
-                            print("     ",a,b,c)
-            print("-"*20)
-        #         if b in compressed_list_copy:
-        #             compressed_list_copy.remove(b)
-        #             print(f"    b ({b}) removed: {compressed_list_copy}", len(compressed_list_copy))
-            
-        #             # c = -sum((a, b))
-        #             # print(c, a,b , "=>", -sum((a, b)))
-        #             for c in compressed_list_copy:
-        #                 if c in compressed_list_copy:
-        #                     print(f"        c ({c}) was found in list:{ compressed_list_copy}")
-        #                     # print(compressed_list_copy)
-        #                     combinations.append(sorted([a,b,c]))
-        #     print("-"*20)
-        # return list(set(tuple(sorted(sub)) for sub in combinations))
-                    
+        res = []
+        nums.sort()
 
+        for i, a in enumerate(nums):
+            if i > 0 and a == nums[i-1]:
+                continue
 
+            l, r = i + 1, len(nums)-1 #l (left) will be the one next to a, and r (right): the end of the list.
+            while l < r:
+                threeSum = a + nums[l] + nums[r]
+                if threeSum > 0:
+                    r -= 1 #if threeSum is more than 0, r-index needs to be reduced by one. 
+                elif threeSum < 0:
+                    r += 1#increase r with 1 
+                else:
+                    res.append([a,nums[l], nums[r]]) #append solution
+                    # reset the pointers (l, r)
+                    l += 1 
+                    while nums[l] == nums[l-1] and l>r:
+                        l += 1 
+        return res
 
-
-
-
-    # def listCompressor(self, numbers:list[int]) -> list[int]:
-    #         _numbers = numbers.copy()
-    #         compressed_list = []
-    #         limit = 0 
-    #         while limit < 3:
-    #             limit += 1
-    #             for i in sorted(set(_numbers)):
-    #                 if i in _numbers:
-    #                     # print(i)
-    #                     _numbers.remove(i)
-    #                     compressed_list.append(i)
-    #             if limit == 2:
-    #                 break
-    #         return compressed_list
-
-def getTestCase():
-    return  [
-        # [0,0,0]
-        [-5,0,-2,3,-2,1,1,3,0,-5,3,3,0,-1],
-        # [-1,0,1,2,-1,-4],
-        # [0,1,1],
-        # [0,0,0,1],
-    ]
 s = Solution()
-case_nr = 0 
-for (numbers) in getTestCase():
-    case_nr += 1
-    answer = s.threeSum(numbers)
-    print()
-    print(f"{case_nr}: {answer}")
-    break
+s.threeSum(nums=[[-1,0,1,2,-1,-4]])
+print(s)
+
+
+        # solution_list = []  #will contain soilutiuons
+        # # solutions = defaultdict(0, "a","b","c")
+        # solutions = {
+        #     'a': None,
+        #     'b': None,
+        #     'c': None,
+        # }
+        # for a in nums:
+        #     for s in solution_list:
+        #         if s['a'] == a:
+        #             nums.pop(a)
+        #             continue
+        #     c = nums[-1]
+        #     for s in solution_list:
+        #         if s['c'] == c:
+        #             nums.pop(-1)
+        #             continue
+        #     for b in nums:
+        #         for s in solution_list:
+        #             if s['b'] == b:
+        #                 nums.pop(-1)
+        #                 continue
+        #         solutions['a'],solutions['c'],solutions['c']=a,b,c
+        #         solution_list.append(solutions)
+        # return solution_list
     
-
-
-
-
-
-
-
-
-
-
