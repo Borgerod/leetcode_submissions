@@ -1,7 +1,6 @@
-l=[5,9,5,7]
-result= []
+from input_generator import Generator
+import random
 
-<<<<<<< Updated upstream
 class solution:
 	def __init__(self, input) -> None:
 		self.price_list = input
@@ -16,7 +15,7 @@ class solution:
 	def setMax(self, ):
 		self.max_price = max(self.price_list, default=0)
 		
-		#print(self.price_list)
+		print(self.price_list)
 
 	def maxProfit(self, ):
 		print(self.max_price)
@@ -59,10 +58,3 @@ if __name__ == '__main__':
 	s.setMax()
 	s.maxProfit()
 	print(f" ==> {s.result}")
-=======
-for i in range(0,len(l)): 
-    last_elem = l.pop() 
-    result.append(last_elem) 
-    l = [i-1 for i in l]
-print(result)
->>>>>>> Stashed changes
