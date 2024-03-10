@@ -25,32 +25,3 @@ class Solution:
 
 s = Solution()
 s.threeSum(nums=[[-1,0,1,2,-1,-4]])
-print(s)
-
-
-        # solution_list = []  #will contain soilutiuons
-        # # solutions = defaultdict(0, "a","b","c")
-        # solutions = {
-        #     'a': None,
-        #     'b': None,
-        #     'c': None,
-        # }
-        # for a in nums:
-        #     for s in solution_list:
-        #         if s['a'] == a:
-        #             nums.pop(a)
-        #             continue
-        #     c = nums[-1]
-        #     for s in solution_list:
-        #         if s['c'] == c:
-        #             nums.pop(-1)
-        #             continue
-        #     for b in nums:
-        #         for s in solution_list:
-        #             if s['b'] == b:
-        #                 nums.pop(-1)
-        #                 continue
-        #         solutions['a'],solutions['c'],solutions['c']=a,b,c
-        #         solution_list.append(solutions)
-        # return solution_list
-    
