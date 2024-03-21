@@ -1,4 +1,4 @@
-# leetcode_submisstions
+# leetcode_submissions
 Library of all my personal leetcode submisstions
 
 
