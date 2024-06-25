@@ -16,6 +16,7 @@ class Solution:
 				return max_profit
 			else: 
 				return 0  
+
 	def getSolution(self, prices):
 		prices = np.array(prices)
 		print(prices)
@@ -25,8 +26,6 @@ class Solution:
 		profit_dict = self.getProfitDict(prices, ppd, min_ranged, pos)
 		max_profit = self.getMaxProfit(profit_dict)
 		return max_profit
-
-
 
 	def makeDict(self, prices):
 		ppd = {}
