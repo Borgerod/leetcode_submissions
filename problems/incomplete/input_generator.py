@@ -1,5 +1,8 @@
 import random
 class Generator:
+    ''' 
+    	input generator for leet code submissions, generates a random case lists of numbers w/options
+    '''
     
     def __init__(self, type, info=None) -> None:
         self.type = type
