@@ -1,0 +1,36 @@
+This is a general prompt that will be applied to any problem: 
+I want you to make a printer that will print this:
+    "GENERATED" new cases, then append them to the original cases
+    -   dont add comments to the list
+    -   its important that the new casee includes the original cases. 
+    -   the total of cases should be 8, (16 if each test uses two cases pr iteration).
+    -   cases should follow the constraints in description.txt
+    -   cases should try and use the maximum limit of the constraints.
+    -   try and apply some 'traps' to the cases, to make some cases a challange for the code. Note; this has to follow the constraints and be legal. no rule breaks.
+
+#important
+NOTE: Never change cases. you will do nothing outside the ''' #> ___ generated cases _______________________________ ''' comment. 
+
+the printer will print the cases in these two formats: 
+"
+cases = [
+    case_1,
+    case_2,
+    .
+    .
+    .
+]
+"
+   and this:
+"
+case_1
+case_2
+.
+.
+.
+"
+
+Finally: add all of this and only this inside this comment at the bottom of the code:
+''' #> ___ generated cases _______________________________
+
+'''
