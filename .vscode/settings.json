@@ -1,3 +1,9 @@
 {
-  "python.REPL.enableREPLSmartSend": false
+  "python.REPL.enableREPLSmartSend": false,
+
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "If the staged changes are in a /completed folder, generate the commit message using this template:\n\nFinish {_problem_name_} (/completed)\n  contains: description, solution.\n  difficulty: {_problem_difficulty_}\n  topics: {_problem_topics_}\n\nIf the staged changes are in a /incomplete folder, use this template:\n\nCreate {_problem_name_} (/incomplete)\n  contains: description, solution.\n  difficulty: {_problem_difficulty_}\n  topics: {_problem_topics_}\n\nWhere:\n- {_problem_name_} is the problem name/number, extracted from the folder name or description.txt.\n- {_problem_difficulty_} is the difficulty, extracted from the 'difficulty:' line in description.txt.\n- {_problem_topics_} is the topics, extracted from the 'topics:' line in description.txt.\n\nAlways extract these variables from the description.txt file in the relevant problem folder being committed."
+    }
+  ]
 }
